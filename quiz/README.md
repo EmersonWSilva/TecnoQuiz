@@ -94,7 +94,7 @@ cd codi-quiz
 
 ### **3. Instalar Dependências**
 
-**Na pasta raiz do projeto (`codi-quiz/`)**, execute:
+**Na pasta raiz do projeto (`quiz/`)**, execute:
 ```bash
 npm install
 ```
@@ -103,7 +103,7 @@ npm install
 
 ## **Como Rodar o Projeto**
 
-Depois de configurar o ambiente, execute o comando abaixo na pasta raiz (`codi-quiz/`):
+Depois de configurar o ambiente, execute o comando abaixo na pasta raiz (`quiz/`):
 ```bash
 npm start
 ```
@@ -127,7 +127,7 @@ Esse comando irá iniciar:
 ## **Estrutura do Projeto**
 
 ```plaintext
-codi-quiz/
+quiz/
 │
 ├── backend/       # Backend em Node.js
 │   ├── src/
@@ -173,4 +173,7 @@ codi-quiz/
 
 ### **Projeto Principal**
 - **concurrently**: Para rodar o frontend e backend ao mesmo tempo.
+```bash
+npm install --save-dev concurrently
+```
 ---
