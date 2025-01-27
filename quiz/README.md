@@ -173,17 +173,4 @@ codi-quiz/
 
 ### **Projeto Principal**
 - **concurrently**: Para rodar o frontend e backend ao mesmo tempo.
-
----
-
-## **Contribuição**
-
-Sinta-se à vontade para abrir **issues** ou enviar **pull requests** para melhorias ou correções.
-
----
-
-## **Licença**
-
-Este projeto está sob a licença MIT. Para mais detalhes, consulte o arquivo `LICENSE`.
-
 ---
