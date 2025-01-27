@@ -1,0 +1,54 @@
+.start-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura total da tela */
+  background-image: url('../assets/question-background.jpg'); /* Imagem de fundo */
+  background-size: cover; /* Ajusta para cobrir todo o espaço */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede repetição */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  color: #fdfdfd; /* Branco suave */
+}
+
+/* Container central */
+.start-container {
+  text-align: center;
+  color: #e4e4e4; /* Cinza claro para o texto */
+  padding: 20px;
+}
+
+/* Título principal */
+.start-container h1 {
+  font-size: 3rem; /* Título maior */
+  color: #2d2b55; /* Roxo escuro */
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Transformar todo o texto em maiúsculas */
+}
+
+/* Descrição */
+.start-container p {
+  font-size: 1.5rem; /* Texto descritivo maior */
+  color: #ffffff; /* Branco suave */
+  margin-bottom: 30px;
+  line-height: 1.8; /* Espaçamento entre linhas */
+  text-align: center; /* Centraliza o texto */
+  white-space: pre-line; /* Mantém as quebras de linha no texto */
+}
+
+/* Botão de iniciar */
+.start-container button {
+  background-color: #b3c7f9; /* Azul-claro */
+  color: #2d2b55; /* Roxo escuro */
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 1.5rem; /* Texto maior no botão */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-container button:hover {
+  background-color: #a0b7f2; /* Azul mais claro no hover */
+}

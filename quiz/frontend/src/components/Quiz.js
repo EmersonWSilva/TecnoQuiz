@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { fetchQuestions, submitAnswers } from '../services/api';
 import '../styles/Quiz.css';
 
-
-const Quiz = () => {
+const Quiz = ({ onFinish }) => {
     const [questions, setQuestions] = useState([]);
     const [answers, setAnswers] = useState([]);
-    const [results, setResults] = useState(null);
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
     useEffect(() => {
         const loadQuestions = async () => {
@@ -17,48 +16,67 @@ const Quiz = () => {
         loadQuestions();
     }, []);
 
-    const handleAnswerChange = (index, answer) => {
+    const handleAnswerChange = (answer) => {
         const updatedAnswers = [...answers];
-        updatedAnswers[index] = answer;
+        updatedAnswers[currentQuestionIndex] = answer;
         setAnswers(updatedAnswers);
+    };
+
+    const handleNext = () => {
+        if (currentQuestionIndex < questions.length - 1) {
+            setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+        }
+    };
+
+    const handlePrevious = () => {
+        if (currentQuestionIndex > 0) {
+            setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
+        }
     };
 
     const handleSubmit = async () => {
         const data = await submitAnswers(answers);
-        setResults(data);
+        onFinish(data); // Envia os resultados para o App.js
     };
 
-    if (results) {
-        return (
-            <div className="results">
-                <h1>Resultados</h1>
-                <p>Total de perguntas: {results.totalQuestions}</p>
-                <p>Acertos: {results.correctAnswers}</p>
-                <p>Percentual de acertos: {results.percentage}%</p>
-            </div>
-        );
+    if (questions.length === 0) {
+        return <p>Carregando perguntas...</p>;
     }
+
+    const currentQuestion = questions[currentQuestionIndex];
 
     return (
         <div className="quiz">
-            <h1>Quiz</h1>
-            {questions.map((q, index) => (
-                <div key={q.id} className="question">
-                    <h2>{q.question}</h2>
-                    {q.options.map((option) => (
-                        <label key={option}>
+            <div className="quiz-container">
+                <h1>{`Pergunta ${currentQuestionIndex + 1} de ${questions.length}`}</h1>
+                <div className="question">
+                    <h2>{currentQuestion.question}</h2>
+                </div>
+                <div className="options">
+                    {currentQuestion.options.map((option) => (
+                        <label key={option} className="option">
                             <input
                                 type="radio"
-                                name={`question-${index}`}
+                                name={`question-${currentQuestionIndex}`}
                                 value={option}
-                                onChange={() => handleAnswerChange(index, option)}
+                                checked={answers[currentQuestionIndex] === option}
+                                onChange={() => handleAnswerChange(option)}
                             />
                             {option}
                         </label>
                     ))}
                 </div>
-            ))}
-            <button onClick={handleSubmit}>Enviar Respostas</button>
+                <div className="navigation">
+                    <button onClick={handlePrevious} disabled={currentQuestionIndex === 0}>
+                        Anterior
+                    </button>
+                    {currentQuestionIndex === questions.length - 1 ? (
+                        <button onClick={handleSubmit}>Enviar Respostas</button>
+                    ) : (
+                        <button onClick={handleNext}>Próxima</button>
+                    )}
+                </div>
+            </div>
         </div>
     );
 };

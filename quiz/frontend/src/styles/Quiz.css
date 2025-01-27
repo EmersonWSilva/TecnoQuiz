@@ -1,27 +1,99 @@
 .quiz {
-  text-align: center;
-  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura total da tela */
+  background-image: url('../assets/question-background.jpg'); /* Caminho atualizado para a imagem */
+  background-size: cover; /* Ajusta para cobrir todo o espaço */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede repetição */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  color: #fdfdfd; /* Texto em branco suave */
+}
+
+/* Container central */
+.quiz-container {
+  background-color: rgba(0, 0, 0, 0.7); /* Preto translúcido */
+  color: #e4e4e4; /* Cinza claro para o texto */
+  width: 60%;
+  max-width: 600px;
   padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.question {
+/* Título e pergunta */
+.quiz-container h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #b3c7f9; /* Azul-claro acinzentado para o título */
+}
+
+.quiz-container h2 {
+  font-size: 1.4rem;
   margin: 20px 0;
+  color: #ffffff; /* Branco suave */
 }
 
-label {
-  display: block;
-  margin: 5px 0;
+/* Opções */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-button {
+.option {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2); /* Fundo branco translúcido */
+  border: 1px solid #b3c7f9; /* Azul-claro para as bordas */
+  border-radius: 10px;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  color: #ffffff; /* Texto branco */
 }
 
-button:hover {
-  background-color: #0056b3;
+.option:hover {
+  background-color: rgba(179, 199, 249, 0.4); /* Azul-claro mais translúcido ao passar o mouse */
+}
+
+.option input {
+  margin-right: 10px;
+  accent-color: #b3c7f9; /* Azul-claro para o marcador */
+  transform: scale(1.2);
+}
+
+/* Botões de navegação */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.navigation button {
+  background-color: #b3c7f9; /* Azul-claro */
+  color: #2d2b55; /* Roxo escuro */
+  border: none;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 48%; /* Largura igual para ambos os botões */
+}
+
+.navigation button:hover {
+  background-color: #a0b7f2; /* Azul mais claro ao passar o mouse */
+}
+
+.navigation button:disabled {
+  background-color: rgba(255, 255, 255, 0.4); /* Branco translúcido */
+  cursor: not-allowed;
 }
