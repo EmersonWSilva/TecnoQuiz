@@ -1,0 +1,12 @@
+.footer {
+  position: fixed; /* Fixa o footer no final da página */
+  bottom: 0; /* Posiciona o footer na parte inferior */
+  width: 100%; /* Ocupa toda a largura da tela */
+  text-align: center; /* Centraliza o texto */
+  background-color: #282c34; /* Cor de fundo combinando com o tema */
+  color: #ffffff; /* Cor do texto */
+  font-family: 'Courier New', cursive; /* Fonte cursiva */
+  font-size: 1rem; /* Tamanho do texto */
+  padding: 10px 0; /* Espaçamento vertical */
+  opacity: 0.8; /* Transparência para suavizar */
+}

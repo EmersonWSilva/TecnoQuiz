@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import StartScreen from './components/StartScreen';
 import Quiz from './components/Quiz';
 import ResultsScreen from './components/ResultsScreen';
+import Footer from './components/Footer'; // Importa o Footer
 
 const App = () => {
     const [currentScreen, setCurrentScreen] = useState('start'); // Controle da tela atual
@@ -28,6 +29,7 @@ const App = () => {
             {currentScreen === 'results' && (
                 <ResultsScreen results={results} onRestart={restartQuiz} />
             )}
+            <Footer /> {/* Adiciona o Footer aqui */}
         </div>
     );
 };
