@@ -36,7 +36,7 @@ const Quiz = ({ onFinish }) => {
 
     const handleSubmit = async () => {
         const data = await submitAnswers(answers);
-        onFinish(data); // Envia os resultados para o App.js
+        onFinish(data);
     };
 
     if (questions.length === 0) {
