@@ -52,3 +52,8 @@
 .start-container button:hover {
   background-color: #a0b7f2; /* Azul mais claro no hover */
 }
+
+.logo {
+  max-width: 500px; /* Ajuste o tamanho do logo */
+  margin-bottom: 20px; /* Espaçamento em relação ao texto */
+}
