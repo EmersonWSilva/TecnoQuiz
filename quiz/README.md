@@ -1,7 +1,7 @@
 
-# **Codi Quiz**
+# **Tecno Quiz**
 
-Bem-vindo ao **Codi Quiz**, uma aplicação Full Stack para quizzes, desenvolvida com **React**, **Node.js** e **PostgreSQL**. Este projeto foi projetado para testar seus conhecimentos sobre desenvolvimento Full Stack, oferecendo uma experiência interativa e responsiva.
+Bem-vindo ao **Tecno Quiz**, uma aplicação Full Stack para quizzes, desenvolvida com **React**, **Node.js** e **PostgreSQL**. Este projeto foi projetado para testar seus conhecimentos sobre desenvolvimento Full Stack, oferecendo uma experiência interativa e responsiva.
 
 ---
 
@@ -23,7 +23,7 @@ Bem-vindo ao **Codi Quiz**, uma aplicação Full Stack para quizzes, desenvolvid
 
 ## **Descrição do Projeto**
 
-O **Codi Quiz** é uma aplicação de quiz interativa, que permite:
+O **Tecno Quiz** é uma aplicação de quiz interativa, que permite:
 - Responder a perguntas de múltipla escolha.
 - Navegar entre perguntas.
 - Visualizar os resultados com um gráfico interativo.
@@ -53,11 +53,11 @@ Antes de começar, certifique-se de ter:
 
 Abra o terminal e execute o comando:
 ```bash
-git clone https://github.com/seu-usuario/codi-quiz.git
+git clone https://github.com/seu-usuario/Tecno-quiz.git
 ```
 Depois, navegue para a pasta do projeto:
 ```bash
-cd codi-quiz
+cd Tecno-quiz
 ```
 
 ---
